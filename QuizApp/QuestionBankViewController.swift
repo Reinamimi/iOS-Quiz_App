@@ -60,14 +60,20 @@ class QuestionBankViewController: UIViewController, UITableViewDelegate, UITable
     
    
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+       
+        if segue.identifier == "toEdit" {
+            let editVC = segue.destination as? EditQuestionViewController
+            let selected_q = localQuestionList![questionTable.indexPathForSelectedRow!.row]
+            editVC!.question = selected_q
+            editVC!.selectionIndex = questionTable.indexPathForSelectedRow!.row
+        }
+     
     }
-    */
+    
 
 }
