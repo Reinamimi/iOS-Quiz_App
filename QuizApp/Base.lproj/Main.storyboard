@@ -142,26 +142,26 @@
         <!--SampleViewController-->
         <scene sceneID="vzN-c2-00x">
             <objects>
-                <viewController title="SampleViewController" id="ozw-A9-stb" customClass="SampleViewController" customModule="QuizApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="SampleViewController" id="ozw-A9-stb" customClass="StartQuizViewController" customModule="QuizApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iJF-D3-L4d">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fMe-6K-en5">
-                                <rect key="frame" x="16" y="103" width="361" height="645"/>
+                                <rect key="frame" x="16" y="103" width="361" height="482"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lep-3f-Pyp">
-                                    <size key="itemSize" width="362" height="581"/>
+                                    <size key="itemSize" width="362" height="471"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="quizCollectionViewCell" id="lHH-M3-duY" customClass="QuizCollectionViewCell" customModule="QuizApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="32" width="362" height="581"/>
+                                        <rect key="frame" x="0.0" y="5.666666666666667" width="362" height="471"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="crq-er-plt">
-                                            <rect key="frame" x="0.0" y="0.0" width="362" height="581"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="362" height="471"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAS-Er-pED">
@@ -237,10 +237,6 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PhS-En-7cY">
-                                                    <rect key="frame" x="29" y="488" width="275" height="5"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </progressView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Answer 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBx-fP-uX8">
                                                     <rect key="frame" x="134" y="404" width="199" height="24"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -258,7 +254,7 @@
                                                 </label>
                                             </subviews>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="362" height="581"/>
+                                        <size key="customSize" width="362" height="471"/>
                                         <connections>
                                             <outlet property="ans1Label" destination="rjg-f1-EZH" id="Qbh-1f-smD"/>
                                             <outlet property="option1Btn" destination="uAS-Er-pED" id="d3K-Kh-ivD"/>
@@ -269,7 +265,6 @@
                                             <outlet property="option4Btn" destination="f71-Fa-pH1" id="QPK-ZT-fzA"/>
                                             <outlet property="option4Label" destination="KBx-fP-uX8" id="yso-89-vsu"/>
                                             <outlet property="questionText" destination="Jbe-ta-lU9" id="tJ1-2G-lea"/>
-                                            <outlet property="quizProgress" destination="PhS-En-7cY" id="OAG-MN-bPV"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -308,6 +303,10 @@
                                     <action selector="previousClicked:" destination="ozw-A9-stb" eventType="touchUpInside" id="eUC-9L-EAZ"/>
                                 </connections>
                             </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="I8Y-qi-U4x">
+                                <rect key="frame" x="69" y="647" width="255" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6FQ-yC-wZw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -317,26 +316,58 @@
                         <outlet property="nextBtn" destination="9wE-gv-oCT" id="cMn-2D-JV9"/>
                         <outlet property="previousBtn" destination="oMK-Zq-1zf" id="5lV-Wv-5uZ"/>
                         <outlet property="quizCollectionView" destination="fMe-6K-en5" id="EyW-PO-Wjf"/>
+                        <outlet property="quizProgress" destination="I8Y-qi-U4x" id="yBF-T8-GHI"/>
+                        <segue destination="TOW-xO-F04" kind="show" identifier="showResult" id="9r5-Oq-M1e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tfj-Kl-BpG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1098" y="754"/>
+            <point key="canvasLocation" x="1096.9465648854962" y="753.52112676056345"/>
         </scene>
-        <!--View Controller-->
+        <!--Quiz Result View Controller-->
         <scene sceneID="6hE-ya-bBc">
             <objects>
-                <viewController id="TOW-xO-F04" sceneMemberID="viewController">
+                <viewController id="TOW-xO-F04" customClass="QuizResultViewController" customModule="QuizApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mlJ-UT-iqT">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Result:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RM5-MP-1hm">
+                                <rect key="frame" x="135" y="271" width="122" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mY6-DJ-cYX">
+                                <rect key="frame" x="136" y="372" width="121" height="108"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ql6-wx-SIA">
+                                <rect key="frame" x="110" y="646" width="172" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Back to Home"/>
+                                <connections>
+                                    <action selector="homeClicked:" destination="TOW-xO-F04" eventType="touchUpInside" id="uqI-db-9NH"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="BML-VE-snH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="J69-gp-Gip"/>
+                    <connections>
+                        <outlet property="resultLbl" destination="mY6-DJ-cYX" id="5ec-Fh-KMf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hCu-TX-L8e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2019" y="858"/>
+            <point key="canvasLocation" x="1933.5877862595419" y="800.70422535211276"/>
         </scene>
         <!--Edit Question View Controller-->
         <scene sceneID="wll-5c-CMW">
@@ -347,7 +378,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tV2-3t-Clv">
-                                <rect key="frame" x="-1" y="57" width="393" height="44"/>
+                                <rect key="frame" x="-1" y="57" width="392" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem systemItem="cancel" id="SKm-VW-q0c">
@@ -457,7 +488,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FDb-4a-gXW">
-                                <rect key="frame" x="-2" y="58" width="394" height="44"/>
+                                <rect key="frame" x="-3" y="58" width="395" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem systemItem="cancel" id="hhN-3F-ZSB">

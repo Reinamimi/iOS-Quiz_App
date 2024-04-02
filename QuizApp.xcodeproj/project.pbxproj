@@ -15,8 +15,8 @@
 		045AC97B2BB0C7AF00D88386 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045AC9792BB0C7AF00D88386 /* LaunchScreen.storyboard */; };
 		045AC9832BB0F48500D88386 /* QuestionBankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045AC9822BB0F48500D88386 /* QuestionBankViewController.swift */; };
 		045AC9852BB0F58C00D88386 /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045AC9842BB0F58C00D88386 /* QuestionModel.swift */; };
-		047F23892BB77C730040932D /* QuizBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F23882BB77C730040932D /* QuizBrain.swift */; };
-		047F238B2BB77F6C0040932D /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F238A2BB77F6C0040932D /* SampleViewController.swift */; };
+		047F238B2BB77F6C0040932D /* StartQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F238A2BB77F6C0040932D /* StartQuizViewController.swift */; };
+		047F238D2BBA78AA0040932D /* QuizResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F238C2BBA78AA0040932D /* QuizResultViewController.swift */; };
 		049B99FF2BB2622C0072ADFF /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049B99FE2BB2622C0072ADFF /* QuestionTableViewCell.swift */; };
 		049B9A012BB26F260072ADFF /* AddQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049B9A002BB26F260072ADFF /* AddQuestionViewController.swift */; };
 		049B9A032BB3477D0072ADFF /* EditQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049B9A022BB3477D0072ADFF /* EditQuestionViewController.swift */; };
@@ -34,8 +34,8 @@
 		045AC97C2BB0C7AF00D88386 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		045AC9822BB0F48500D88386 /* QuestionBankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBankViewController.swift; sourceTree = "<group>"; };
 		045AC9842BB0F58C00D88386 /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
-		047F23882BB77C730040932D /* QuizBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizBrain.swift; sourceTree = "<group>"; };
-		047F238A2BB77F6C0040932D /* SampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
+		047F238A2BB77F6C0040932D /* StartQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartQuizViewController.swift; sourceTree = "<group>"; };
+		047F238C2BBA78AA0040932D /* QuizResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResultViewController.swift; sourceTree = "<group>"; };
 		049B99FE2BB2622C0072ADFF /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
 		049B9A002BB26F260072ADFF /* AddQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionViewController.swift; sourceTree = "<group>"; };
 		049B9A022BB3477D0072ADFF /* EditQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditQuestionViewController.swift; sourceTree = "<group>"; };
@@ -85,8 +85,8 @@
 				049B9A002BB26F260072ADFF /* AddQuestionViewController.swift */,
 				049B9A022BB3477D0072ADFF /* EditQuestionViewController.swift */,
 				049B9A062BB50B1B0072ADFF /* QuizCollectionViewCell.swift */,
-				047F23882BB77C730040932D /* QuizBrain.swift */,
-				047F238A2BB77F6C0040932D /* SampleViewController.swift */,
+				047F238A2BB77F6C0040932D /* StartQuizViewController.swift */,
+				047F238C2BBA78AA0040932D /* QuizResultViewController.swift */,
 			);
 			path = QuizApp;
 			sourceTree = "<group>";
@@ -164,12 +164,12 @@
 			files = (
 				049B9A032BB3477D0072ADFF /* EditQuestionViewController.swift in Sources */,
 				045AC9832BB0F48500D88386 /* QuestionBankViewController.swift in Sources */,
-				047F238B2BB77F6C0040932D /* SampleViewController.swift in Sources */,
+				047F238B2BB77F6C0040932D /* StartQuizViewController.swift in Sources */,
 				045AC9732BB0C7AE00D88386 /* ViewController.swift in Sources */,
 				045AC96F2BB0C7AE00D88386 /* AppDelegate.swift in Sources */,
-				047F23892BB77C730040932D /* QuizBrain.swift in Sources */,
 				049B9A072BB50B1B0072ADFF /* QuizCollectionViewCell.swift in Sources */,
 				049B99FF2BB2622C0072ADFF /* QuestionTableViewCell.swift in Sources */,
+				047F238D2BBA78AA0040932D /* QuizResultViewController.swift in Sources */,
 				045AC9712BB0C7AE00D88386 /* SceneDelegate.swift in Sources */,
 				049B9A012BB26F260072ADFF /* AddQuestionViewController.swift in Sources */,
 				045AC9852BB0F58C00D88386 /* QuestionModel.swift in Sources */,

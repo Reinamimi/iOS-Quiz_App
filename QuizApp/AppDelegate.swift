@@ -15,8 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var allQuestions = [QuestionModel(question: "What is the capital of Spain?", correctans: "Madrid", incorrectans1: "Barcelona", incorrectans2: "Rome", incorrectans3: "Paris"),
                         QuestionModel(question: "Who wrote 'To Kill a Mockingbird'?", correctans: "Harper Lee", incorrectans1: "J.K. Rowling", incorrectans2: "Stephen King", incorrectans3: "Charles Dickens"),
                         QuestionModel(question: "What is the chemical symbol for gold?", correctans: "Au", incorrectans1: "Ag", incorrectans2: "Fe", incorrectans3: "Cu"),
-                        QuestionModel(question: "What is the largest ocean on Earth?", correctans: "Pacific Ocean", incorrectans1: "Atlantic Ocean", incorrectans2: "Indian Ocean", incorrectans3: "Arctic Ocean"),
-                        QuestionModel(question: "Who discovered penicillin?", correctans: "Alexander Fleming", incorrectans1: "Albert Einstein", incorrectans2: "Isaac Newton", incorrectans3: "Marie Curie")
+                        QuestionModel(question: "What is the largest ocean on Earth?", correctans: "Pacific Ocean", incorrectans1: "Atlantic Ocean", incorrectans2: "Indian Ocean", incorrectans3: "Arctic Ocean")
             ]
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {

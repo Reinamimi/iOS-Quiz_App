@@ -1,5 +1,5 @@
 //
-//  SampleViewController.swift
+//  StartQuizViewController.swift
 //  QuizApp
 //
 //  Created by mac on 29/03/2024.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SampleViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class StartQuizViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
     var questions = (UIApplication.shared.delegate as? AppDelegate)?.allQuestions
     
@@ -22,6 +22,8 @@ class SampleViewController: UIViewController, UICollectionViewDataSource, UIColl
 
     @IBOutlet weak var quizCollectionView: UICollectionView!
     
+    @IBOutlet weak var quizProgress: UIProgressView!
+    
     @IBOutlet weak var nextBtn: UIButton!
     
     @IBOutlet weak var previousBtn: UIButton!
@@ -31,6 +33,9 @@ class SampleViewController: UIViewController, UICollectionViewDataSource, UIColl
 
         // Do any additional setup after loading the view.
         title = "My Quiz"
+        if let questionsCount = questions?.count {
+            quizProgress.progress = Float(1) / Float(questionsCount)
+                    }
         
     }
     
@@ -80,7 +85,6 @@ class SampleViewController: UIViewController, UICollectionViewDataSource, UIColl
         return 0
     }
     
-
     
     @IBAction func previousClicked(_ sender: Any) {
         
@@ -88,7 +92,9 @@ class SampleViewController: UIViewController, UICollectionViewDataSource, UIColl
             quizCollectionView.scrollToItem(at: IndexPath(row: (collectionIndex-1), section: 0), at: .left, animated: true)
             collectionIndex -= 1
             points -= 1
+            
         }
+        isAnsSelected = true
     }
     
     
@@ -110,6 +116,9 @@ class SampleViewController: UIViewController, UICollectionViewDataSource, UIColl
             collectionIndex += 1
             quizCollectionView.scrollToItem(at: IndexPath(row: collectionIndex, section: 0), at: .right, animated: true)
             isAnsSelected = false
+            if let questionsCount = questions?.count {
+                quizProgress.progress = Float(collectionIndex + 1) / Float(questionsCount)
+                        }
         } else {
             performSegue(withIdentifier: "showResult", sender: nextBtn)
         }
@@ -118,14 +127,18 @@ class SampleViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if let resultVC = segue.destination as? QuizResultViewController {
+            resultVC.totalPoints = points
+            resultVC.totalNumQuestions = questions?.count
+        }
     }
-    */
+    
 
 }

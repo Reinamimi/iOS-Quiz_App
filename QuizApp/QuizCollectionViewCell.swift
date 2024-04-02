@@ -135,9 +135,9 @@ class QuizCollectionViewCell: UICollectionViewCell {
         default:
             break
         }
-        if let currentPosition = currentposition, let questionsCount = questionsCount {
-            quizProgress.progress = Float(currentPosition) / Float(questionsCount)
-                    }
+//        if let currentPosition = currentposition, let questionsCount = questionsCount {
+//            quizProgress.progress = Float(currentPosition) / Float(questionsCount)
+//                    }
         
     }
     
