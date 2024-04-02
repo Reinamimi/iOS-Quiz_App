@@ -139,10 +139,10 @@
             </objects>
             <point key="canvasLocation" x="1765.6488549618321" y="24.647887323943664"/>
         </scene>
-        <!--SampleViewController-->
+        <!--StartQuizViewController-->
         <scene sceneID="vzN-c2-00x">
             <objects>
-                <viewController title="SampleViewController" id="ozw-A9-stb" customClass="StartQuizViewController" customModule="QuizApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="StartQuizViewController" id="ozw-A9-stb" customClass="StartQuizViewController" customModule="QuizApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iJF-D3-L4d">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

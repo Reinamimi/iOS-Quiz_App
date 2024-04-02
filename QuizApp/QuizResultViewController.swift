@@ -2,7 +2,6 @@
 //  QuizResultViewController.swift
 //  QuizApp
 //
-//  Created by mac on 01/04/2024.
 //
 
 import UIKit

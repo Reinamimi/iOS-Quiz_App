@@ -1,8 +1,7 @@
 //
 //  QuizCollectionViewCell.swift
 //  QuizApp
-//
-//  Created by mac on 27/03/2024.
+
 //
 
 import UIKit
@@ -19,8 +18,6 @@ class QuizCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var option4Label: UILabel!
     
-    @IBOutlet weak var quizProgress: UIProgressView!
-    
     @IBOutlet weak var option1Btn: UIButton!
     
     @IBOutlet weak var option2Btn: UIButton!
@@ -31,19 +28,9 @@ class QuizCollectionViewCell: UICollectionViewCell {
     
     
     private var correctAns : String?
-//    private var isCorrectAns : Bool?
-//    private var ansSelection : String?
-    private var currentposition : Int?
-    private var questionsCount: Int?
+//    private var currentposition : Int?
+//    private var questionsCount: Int?
     
-   
-    var setProgress: [Int]? {
-        didSet {
-            currentposition = setProgress![0] + 1
-            questionsCount = setProgress![1]
-        }
-    }
-
     var setValues: QuestionModel? {
         didSet {
             correctAns = setValues?.correctans
@@ -101,7 +88,6 @@ class QuizCollectionViewCell: UICollectionViewCell {
             option1Btn.isSelected = false
             option3Btn.isSelected = false
             option4Btn.isSelected = false
-//            ansSelection = option2Label.text
             var isCorrect = false
             if correctAns == option2Label.text {
                 isCorrect = true
@@ -113,7 +99,6 @@ class QuizCollectionViewCell: UICollectionViewCell {
             option1Btn.isSelected = false
             option2Btn.isSelected = false
             option4Btn.isSelected = false
-//            ansSelection = option3Label.text
             var isCorrect = false
             if correctAns == option3Label.text {
                 isCorrect = true
@@ -125,7 +110,6 @@ class QuizCollectionViewCell: UICollectionViewCell {
             option1Btn.isSelected = false
             option2Btn.isSelected = false
             option3Btn.isSelected = false
-//            ansSelection = option4Label.text
             var isCorrect = false
             if correctAns == option4Label.text {
                 isCorrect = true
@@ -135,10 +119,7 @@ class QuizCollectionViewCell: UICollectionViewCell {
         default:
             break
         }
-//        if let currentPosition = currentposition, let questionsCount = questionsCount {
-//            quizProgress.progress = Float(currentPosition) / Float(questionsCount)
-//                    }
-        
+
     }
     
 }

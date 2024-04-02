@@ -15,7 +15,7 @@ class StartQuizViewController: UIViewController, UICollectionViewDataSource, UIC
     var collectionIndex = 0
     
     var isAnsSelected = false // bool to check if user selects an option
-    var isCorrectAns = false
+    var isCorrectAns = false 
     
     
     
@@ -61,7 +61,6 @@ class StartQuizViewController: UIViewController, UICollectionViewDataSource, UIC
         var cell = collectionView.dequeueReusableCell(withReuseIdentifier: "quizCollectionViewCell", for: indexPath) as? QuizCollectionViewCell
 
         cell?.setValues = questions![indexPath.row]
-        cell?.setProgress = [indexPath.row, questions!.count]
         cell?.selectedOption = {  isCorrect in
             self.isAnsSelected = true
             self.isCorrectAns = isCorrect
